@@ -5,14 +5,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     public float Damage;
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
