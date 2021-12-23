@@ -9,9 +9,4 @@ public class EnemySpawn : MonoBehaviour
     {
         var e01 = Instantiate(EnemyPrefab, transform.position, Quaternion.identity);
     }
-
-    void Update()
-    {
-        
-    }
 }
