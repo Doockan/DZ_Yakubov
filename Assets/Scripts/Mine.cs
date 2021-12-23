@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float Damage;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            var hp = other.GetComponent<Health>();
+            Debug.Log("BOOOOOM");
+            hp.CurrentHealth -= Damage;
+            Destroy(gameObject);
+        }
     }
 }
